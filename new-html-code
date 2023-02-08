@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSI HIT</title>
+</head>
+
+<style>
+    body {
+        /* background-color: rgb(19, 19, 221); */
+        background-image: url(https://i.pinimg.com/236x/65/61/06/6561067e34e3eb63135ec42397fabc45.jpg);
+        /* background-repeat: no-repeat; */
+        /* background-size: cover; */
+        /* height: 100%; */
+        color: white;
+        /* border: 2px solid rgb(145, 11, 11); */
+        /* opacity: 0.8; */
+    }
+
+    #bod {
+        color: white;
+        background-color: rgb(2, 2, 51);
+        margin: 2px 2px;
+        padding: 2px 2px 2px 2px;
+    }
+
+    .box {
+        /* border: 2px solid green; */
+        margin: 2px 2px;
+    }
+
+    .flex-hor {
+        display: flex;
+        flex-direction: column;
+        /* border: 2px solid blue; */
+        margin: 2px 2px;
+        flex-wrap: wrap;
+    }
+
+    ul li a.a {
+        text-decoration: none;
+        /* border: 1px red solid; */
+        margin: 3px 3px;
+        padding: 2px 50px;
+        color: white;
+        /* width: 10px; */
+        font-size: 25px;
+    }
+
+    ul li a.a:hover {
+        background-color: rgb(10, 14, 93);
+        color: brown;
+    }
+
+    ul li a.a:active {
+        background-color: cornsilk;
+        color: blue;
+    }
+
+    ul li {
+        list-style-type: none;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .flex-col {
+        display: flex;
+        flex-direction: row;
+        /* border: 2px solid yellow; */
+        margin: 2px 2px;
+        justify-content: center;
+        /* flex-wrap: wrap; */
+    }
+
+    ul.list {
+        margin: 3px 3px;
+        padding: 5px 5px;
+        /* border: 1px solid skyblue; */
+        width: 75%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input.SearchBar {
+        margin: 3px 3px;
+        padding: 5px 5px;
+        /* border: 1px solid skyblue; */
+        border-radius: 10px;
+        width: 25%;
+        font-size: 20px;
+    }
+
+    #nav {
+        padding: 2px 2px;
+        background-color: rgb(2, 2, 51);
+        /* border-radius: 5px; */
+    }
+
+    img.img {
+        /* border: 2px solid blue; */
+        height: 100px;
+        width: 600px;
+        /* justify-content: center;
+        align-items: center; */
+        border-radius: 30px;
+    }
+
+    h1 {
+        text-align: center;
+        /* border: 2px solid green; */
+        text-decoration: underline;
+    }
+
+    h2 {
+        text-align: center;
+        /* border: 2px solid green; */
+    }
+
+    summary:hover {
+        cursor: pointer;
+    }
+
+    /* .flex-img{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    } */
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto auto;
+        gap: 4px;
+        /* border: 1px solid yellow; */
+    }
+
+    .grid2 {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto auto;
+        gap: 4px;
+        /* border: 1px solid yellow; */
+        width: 75%;
+    }
+
+    .bb {
+        width: 50%;
+    }
+
+    .grid1 {
+        display: grid;
+        grid-template-columns: 7fr 3fr;
+
+        gap: 4px;
+        /* border: 1px solid yellow; */
+    }
+
+    .gridbox {
+        /* border: 2px solid green; */
+        margin: 2px 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gridboximage {
+        /* border: 1px red solid; */
+        height: 140px;
+        width: 140px;
+        justify-content: center;
+        border-radius: 100px;
+    }
+
+    .gridboximage:hover {
+        background-color: green;
+        height: 200px;
+        width: 200px;
+        border-radius: 50px;
+    }
+
+    .flex-grid {
+        display: flex;
+        flex-direction: column;
+        /* border: 1px solid greenyellow; */
+        width: 25%;
+    }
+
+    .boxside {
+        /* border: 2px solid pink; */
+        margin: 2px 2px;
+        height: 100px;
+        text-align: center;
+        width: 500px;
+        background-color: #0e0e97;
+        border-radius: 5px;
+    }
+
+    .boxside:hover {
+        background-color: rgb(32, 184, 244);
+
+    }
+
+    .boxside:active {
+        background-color: cornsilk;
+
+    }
+
+    .last {
+        margin: 2px 2px 2px 2px;
+        padding: 2px 2px;
+        font-size: 20px;
+        color: white;
+    }
+
+    .last:hover {
+        color: yellow;
+    }
+
+    .last:active {
+        color: red;
+    }
+
+    .photo {
+        /* border: 1px red solid; */
+        height: 100px;
+        width: 100px;
+        margin: 2px 2px 2px 2px;
+        padding: 2px 2px;
+    }
+
+    .form {
+        text-align: center;
+    }
+
+    .btn {
+        height: 40px;
+        width: 200px;
+        font-size: 25px;
+        border-radius: 10px;
+        color: black;
+    }
+
+    .btn:hover {
+        background-color: rgb(0, 147, 205);
+        color: cornsilk;
+    }
+
+    .btn:active {
+        background-color: cornsilk;
+        color: red;
+    }
+
+    .btn2 {
+        height: 30px;
+        width: 250px;
+        font-size: 25px;
+        border-radius: 10px;
+        color: black;
+    }
+
+    .btn2:hover {
+        background-color: rgb(0, 147, 205);
+        color: cornsilk;
+    }
+
+    .btn2:active {
+        background-color: cornsilk;
+        color: red;
+    }
+
+    .btn3 {
+        height: 30px;
+        width: 200px;
+        font-size: 25px;
+        border-radius: 10px;
+        color: black;
+    }
+
+    .btn3:hover {
+        background-color: rgb(0, 147, 205);
+        color: cornsilk;
+    }
+
+    .btn3:active {
+        background-color: cornsilk;
+        color: red;
+    }
+</style>
+
+<body class="flex-hor">
+    <div id="nav" class="flex-col">
+        <ul class="list">
+            <li><a href="#" class="a">Home</a></li>
+            <li><a href="http://www.csi-india.org/about/" class="a" target="_blank">About Us</a></li>
+            <li><a href="http://www.csi-india.org/" class="a" target="_blank">Contact Us</a></li>
+            <li><a href="http://www.csi-india.org/news/" class="a" target="_blank">NEWS</a></li>
+        </ul>
+
+        <input type="text" placeholder="Search here for any queries." class="SearchBar">
+    </div>
+    <div class="flex-col">
+
+        <img src="data:image/png;base64,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"
+            class="img">
+    </div>
+    <div class="box">
+        <h1>Welcome to Computer Society of India.<br>HIT Students's branch.
+        </h1>
+    </div>
+    <div class="box">
+        <h2>Computer Society of India is a body of computer professionals in India.
+            <details>
+                <summary>
+                    It was started on 6 March 1965 by a few computer professionals and has now grown to be the national
+                    body representing computer professionals. It has 72 chapters across India, 511 student branches, and
+                    100,000 members.
+                </summary>
+                The Computer Society of India is a non-profit professional meet to exchange views and information to
+                learn and share ideas. The wide spectrum of members is committed to the advancement of theory and
+                practice of Computer Engineering and Technology Systems, Science and Engineering, Information Processing
+                and related Arts and Sciences.
+
+                The Society also encourages and assists professionals to maintain integrity and competence of the
+                profession and fosters a sense of partnership amongst members. Besides the activities held at the
+                Chapters and Student Branches, the Society also conducts periodic conferences, seminars.
+
+                Through the initiatives of Professor Rangaswamy Narasimhan the first President, CSI has been in close
+                liaison with International Federation for Information Processing (IFIP) since its inception in 1965,
+                when observers from India attended the IFIP Council meeting. Since 1974, when CSI became a member of
+                IFIP, CSI has organized many IFIP sponsored events and was host to the 1978 Council meeting in Bombay
+                and 1988 General Assembly in New Delhi. It represents India in technical committees and working groups
+                of IFIP. Prof. Vipin Tyagi, Jaypee University of Engineering and Technology is Hon. Secretary of
+                Computer Society of India.
+            </details><br>
+            <button class="btn"><a href="https://en.wikipedia.org/wiki/Computer_Society_of_India" class="a"
+                    target="_blank">Wikipedia</a></button>
+        </h2>
+    </div>
+    <div class="box">
+        <h1>CSI Team : 2022-2023</h1>
+        <h1>HIT Branch top post holders</h1>
+        <div class="grid">
+            <div class="gridbox">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLGZsYc8h4Zds-CgwVk_T5ykObxIbZKfvHtQ&usqp=CAU&reload=on alt="
+                    class="gridboximage">
+                <h2>Atul Kumar<br>-Chairperson-</h2>
+                <button class="btn2"><a href="https://www.instagram.com/atulsolu/" class="a"
+                        target="_blank">Instagram</a></button>
+                <button class="btn2">-Linked In-</button><br>
+
+            </div>
+            <div class="gridbox">
+                <img src="data:image/jpeg;base64,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"
+                    alt="" class="gridboximage">
+                <h2>Sneha Roy<br>-Vice Chairperson-</h2>
+                <button class="btn2"><a href="https://www.instagram.com/adorable_sneha/" class="a"
+                        target="_blank">Instagram</a></button>
+                <button class="btn2">-Linked In-</button><br>
+
+            </div>
+            <div class="gridbox">
+                <img src="https://media.licdn.com/dms/image/D4D03AQHsy_wJ7yvQlg/profile-displayphoto-shrink_100_100/0/1663530954481?e=1680134400&v=beta&t=gF1CmR3NAj5opALvuUn4fP0FK2y8kx_nkecMx7qCRV0"
+                    alt="" class="gridboximage">
+                <h2>Md. Aminul Haque<br>-Secretary-</h2>
+                <button class="btn2"><a href="https://www.instagram.com/aminul7560/" class="a"
+                        target="_blank">Instagram</a></button>
+                <button class="btn2"><a href="https://www.linkedin.com/in/md-aminul-haque-6b93491a1/" class="a"
+                        target="_blank">Linked In</a></button><br>
+
+            </div>
+            <div class="gridbox">
+                <img src="https://media.licdn.com/dms/image/C4D03AQHjfpe98XfucA/profile-displayphoto-shrink_100_100/0/1658914283930?e=1680134400&v=beta&t=qEUTcHXslF9Mdn4AuQdYOoj6AhHxCMhir3Y1LnLZ9cw"
+                    alt="" class="gridboximage">
+                <h2>Nityanand Kumar<br>-Treaserer-</h2>
+                <button class="btn2"><a href="https://www.instagram.com/nityanandkumarm/" class="a"
+                        target="_blank">Instagram</a></button>
+                <button class="btn2"><a href="https://www.linkedin.com/in/nityanand-kumar-39b85412b/" class="a"
+                        target="_blank">Linked In</a></button><br>
+
+            </div>
+            <div class="gridbox">
+                <img src="https://media.licdn.com/dms/image/C4D03AQE8eAYl6L3uTQ/profile-displayphoto-shrink_100_100/0/1653280183414?e=1680134400&v=beta&t=UfgGCtL62koIjnHbjKE63prZwqzjmNjz5_YrZCknTl8"
+                    alt="" class="gridboximage">
+                <h2>Rupsa Das<br>-Treaserer-</h2>
+                <button class="btn2">-Instagram-</button>
+                <button class="btn2"><a href="https://www.linkedin.com/in/dasrupsa/" class="a" target="_blank">Linked
+                        In</a></button><br>
+
+            </div>
+            <div class="gridbox">
+                <img src="https://media.licdn.com/dms/image/C4D03AQFGkDHEUvbFpw/profile-displayphoto-shrink_100_100/0/1658783911209?e=1680134400&v=beta&t=ikeyAZvVNRcnbCUUCstDg9ir-p0F0W20Q1IxktOskhk"
+                    alt="" class="gridboximage">
+                <h2>Sarthak Kumar<br>-Programme Head-</h2>
+                <button class="btn2">Instagram</button>
+                <button class="btn2"><a href="https://www.linkedin.com/in/sarthak-kumar-025353163/" class="a"
+                        target="_blank">Linked In</a></button><br>
+
+            </div>
+            <div class="gridbox">
+                <img src="https://media.licdn.com/dms/image/D5603AQEUpETGEjej3w/profile-displayphoto-shrink_100_100/0/1669117495868?e=1680134400&v=beta&t=cuerHfgj7O_JjkLJE0YNr5drQKlRzEAg5joMzL9ZnEs"
+                    alt="" class="gridboximage">
+                <h2>Adrian Sajjan<br>-Programme Head-</h2>
+                <button class="btn2"><a href="https://www.instagram.com/__.codex.__/" class="a"
+                        target="_blank">Instagram</a></button>
+                <button class="btn2">-Linked In-</button><br>
+
+            </div>
+            <div class="gridbox">
+                <img src="https://media.licdn.com/dms/image/D4D03AQFogjXdqWOTPw/profile-displayphoto-shrink_100_100/0/1666032064929?e=1680134400&v=beta&t=YFrKRiRQhZfy9iWIEDweEQdFgfYYYQB1ZSpZTm-APwI"
+                    alt="" class="gridboximage">
+                <h2>Ayush Kumar Gupta<br>-Programme Head-</h2>
+                <button class="btn2"><a href="https://www.instagram.com/ig_finster/" class="a"
+                        target="_blank">Instagram</a></button>
+                <button class="btn2"><a href="https://www.linkedin.com/in/finster-15/" class="a" target="_blank">Linked
+                        In</a></button><br>
+
+            </div>
+            <div class="gridbox">
+                <img src="https://media.licdn.com/dms/image/D4D03AQG0mhj0vR-XgA/profile-displayphoto-shrink_100_100/0/1666317715261?e=1680134400&v=beta&t=W0wyR5LNwISu7YAZLWVofx-VmMxzGP8Nd24HRu8-pdo"
+                    alt="" class="gridboximage">
+                <h2>Aman Snehi<br>-Publicity Head-</h2>
+                <button class="btn2">-Instagram-</button>
+                <button class="btn2"><a href="https://www.linkedin.com/in/aman-snehi/" class="a" target="_blank">Linked
+                        In</a></button><br>
+
+            </div>
+            <div class="gridbox">
+                <img src="https://media.licdn.com/dms/image/C4E03AQHCC0n7dFlbEQ/profile-displayphoto-shrink_100_100/0/1634979790503?e=1680134400&v=beta&t=BTvognCHt9TwQfGr6ZKwZEA4vZyFh9s_AO0zc_a4jgI"
+                    alt="" class="gridboximage">
+                <h2>Ishani Panja<br>-Publicity Head-</h2>
+                <button class="btn2"><a href="https://www.instagram.com/_is.ha.ni_/" class="a"
+                        target="_blank">Instagram</a></button>
+                <button class="btn2"><a href="https://www.linkedin.com/in/ishani-panja-448437204/" class="a"
+                        target="_blank">Linked In</a></button><br>
+
+            </div>
+            <div class="gridbox">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLGZsYc8h4Zds-CgwVk_T5ykObxIbZKfvHtQ&usqp=CAU&reload=on"
+                    alt="" class="gridboximage">
+                <h2>Abhishek Kumar<br>-Membership Head-</h2>
+                <button class="btn2"><a href="https://www.instagram.com/half_engineerr._/" class="a"
+                        target="_blank">Instagram</a></button>
+                <button class="btn2">-Linked In-</button><br>
+
+            </div>
+            <div class="gridbox">
+                <img src="https://media.licdn.com/dms/image/D4D03AQFFLwSGtCbhLg/profile-displayphoto-shrink_400_400/0/1667536951493?e=1680134400&v=beta&t=qVR9vbjaf37ytXsqH8B1DaUIPxsYFB63aMV4KSoub0A"
+                    alt="" class="gridboximage">
+                <h2>Shweta Kumari<br>-Membership Head-</h2>
+                <button class="btn2">-Instagram-</button>
+                <button class="btn2"><a href="https://www.linkedin.com/in/shweta-kumari-72a1761b2/" class="a"
+                        target="_blank">Linked In</a></button><br>
+
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="bb">
+            <h1>Volunteers</h1>
+        </div>
+        <div class="grid1">
+            <div class="grid2">
+
+                <div class="gridbox">
+                    <img src="https://media.licdn.com/dms/image/D4E35AQE3r-8zPjVJmA/profile-framedphoto-shrink_400_400/0/1632591423238?e=1675098000&v=beta&t=w76q93mQdW6tet5LQ8WHXOLb3K2iEEXB4xiExd0D1nA"
+                        alt="" class="gridboximage">
+                    <h2>Prithvi Raj</h2>
+                    <button class="btn3"><a href="https://www.instagram.com/rprithvi653/" class="a"
+                            target="_blank">Instagram</a></button>
+                    <button class="btn3"><a href="https://www.linkedin.com/in/prithivi-raj-b69140209/" class="a"
+                            target="_blank">Linked In</a></button><br>
+
+                </div>
+                <div class="gridbox">
+                    <img src="https://media.licdn.com/dms/image/D4E03AQEPR9VKrWfZvQ/profile-displayphoto-shrink_100_100/0/1674397812981?e=1680134400&v=beta&t=Bp4rNr8wpCwua53YlH7bcDGaPjnuh3lyWuA8AVoyASE"
+                        alt="" class="gridboximage">
+                    <h2>Shradhanvita Mukherji</h2>
+                    <button class="btn3"><a href="https://www.instagram.com/shradhanwita/" class="a"
+                            target="_blank">Instagram</a></button>
+                    <button class="btn3"><a href="https://www.linkedin.com/in/shradhanwita-mukherjee-016211262/" class="a"
+                            target="_blank">Linked In</a></button><br>
+
+                </div>
+                <div class="gridbox">
+                    <img src="https://media.licdn.com/dms/image/C5603AQGkr_3GFjl2oA/profile-displayphoto-shrink_100_100/0/1631972396201?e=1680134400&v=beta&t=d6cQj0BO3AAssqxWShOl0ZQw8wVMsNG3kPnMG1-sjPQ"
+                        alt="" class="gridboximage">
+                    <h2>Abhinav Jha</h2>
+                    <button class="btn3"><a href="https://www.instagram.com/i.abhijha/" class="a"
+                            target="_blank">Instagram</a></button>
+                    <button class="btn3"><a href="https://www.linkedin.com/in/iabhijha/" class="a"
+                            target="_blank">Linked In</a></button><br>
+
+                </div>
+                <div class="gridbox">
+                    <img src="https://media.licdn.com/dms/image/C4D03AQGSgWN3tmtkDw/profile-displayphoto-shrink_400_400/0/1622008451008?e=1680134400&v=beta&t=vnunEAiYjV3oa2O7f3PSglTDzZyyndutcdBKewZpwec"
+                        alt="" class="gridboximage">
+                    <h2>Himanshu Shekhar</h2>
+                    <button class="btn3"><a href="https://www.instagram.com/_shekhar_himanshu7/" class="a"
+                            target="_blank">Instagram</a></button>
+                    <button class="btn3"><a href="https://www.linkedin.com/in/himanshu-shekhar-1740b4213/" class="a"
+                            target="_blank">Linked In</a></button><br>
+
+                </div>
+                <div class="gridbox">
+                    <img src="https://media.licdn.com/dms/image/C4D03AQEu1dkNmK5M6A/profile-displayphoto-shrink_100_100/0/1660831516887?e=1680134400&v=beta&t=KsCf68RR7qU4fXELqN8iSrqBLWD1fHo5q44feEOA9DM"
+                        alt="" class="gridboximage">
+                    <h2>Gagan Prit Singh</h2>
+                    <button class="btn3"><a href="https://www.instagram.com/_gaganprit_singh/" class="a"
+                            target="_blank">Instagram</a></button>
+                    <button class="btn3"><a href="https://www.linkedin.com/in/gaganprit-singh-7606a220a/" class="a"
+                            target="_blank">Linked In</a></button><br>
+
+                </div>
+                <div class="gridbox">
+                    <img src="https://media.licdn.com/dms/image/C4D03AQGlgteXcGEaaA/profile-displayphoto-shrink_100_100/0/1634941525483?e=1680134400&v=beta&t=4oTSaWQ_r7iyKPCBrfmRVw8wCZopC2G9tv_TvvLBMiU"
+                        alt="" class="gridboximage">
+                    <h2>Vishal Morya</h2>
+                    <button class="btn3"><a href="https://www.instagram.com/vishal_morya__/" class="a"
+                            target="_blank">Instagram</a></button>
+                    <button class="btn3"><a href="https://www.linkedin.com/in/vishal-morya-9705391b6/" class="a"
+                            target="_blank">Linked In</a></button><br>
+
+                </div>
+                <div class="gridbox">
+                    <img src="https://media.licdn.com/dms/image/C4E03AQGQbYraYtfI1A/profile-displayphoto-shrink_100_100/0/1634396226449?e=1680134400&v=beta&t=jU4Ms4Piw4eYsHrPav0g5Zzn5S3DO29ycEZaL0M8fps"
+                        alt="" class="gridboximage">
+                    <h2>Shruti Deb Barman</h2>
+                    <button class="btn3"><a href="https://www.instagram.com/shrutidebbarman/" class="a"
+                            target="_blank">Instagram</a></button>
+                    <button class="btn3"><a href="https://www.linkedin.com/in/shruti-debbarman-404681223/" class="a"
+                            target="_blank">Linked In</a></button><br>
+
+                </div>
+                <div class="gridbox">
+                    <img src="data:image/jpeg;base64,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"
+                        alt="" class="gridboximage">
+                    <h2>Shweta Kumari</h2>
+                    <button class="btn3"><a href="https://www.instagram.com/___.s.h.w.e.t.a._____/" class="a" 
+                            target="_blank">Instagram</a></button>
+                    <button class="btn3">-Linked In-</button><br>
+
+                </div>
+                <div class="gridbox">
+                    <img src="data:image/jpeg;base64,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"
+                        alt="" class="gridboximage">
+                    <h2>Shuddhi Jain</h2>
+                    <button class="btn3"><a href="https://www.instagram.com/shuddhi.08/" class="a"
+                            target="_blank">Instagram</a></button>
+                    <button class="btn3">-Linked In-</button><br>
+
+                </div>
+                <div class="gridbox">
+                    <img src="https://media.licdn.com/dms/image/C4D03AQEC0OhhqUJAyw/profile-displayphoto-shrink_100_100/0/1649054988176?e=1680134400&v=beta&t=NXz4k0H9toxDeZI_5Ah5hlSuQGGt69GApyyDMpv9RCc"
+                        alt="" class="gridboximage">
+                    <h2>Deepak Sarkar</h2>
+                    <button class="btn3">-Instagram-</button>
+                    <button class="btn3"><a href="https://www.linkedin.com/in/deepak-sarkar-816395222/" class="a"
+                            target="_blank">Linked In</a></button><br>
+
+                </div>
+                <div class="gridbox">
+                    <img src="https://media.licdn.com/dms/image/C5603AQFiy52sEUSLdw/profile-displayphoto-shrink_100_100/0/1647960449088?e=1680134400&v=beta&t=nPSHBC75K7HAQ9DBPcH94wdu32UW5e4SbK7-3rWOysw"
+                        alt="" class="gridboximage">
+                    <h2>Joydip Pan</h2>
+                    <button class="btn3"><a href="https://www.instagram.com/joydip_pan/" class="a"
+                            target="_blank">Instagram</a></button>
+                    <button class="btn3"><a href="https://www.linkedin.com/in/joydip-pan/" class="a"
+                            target="_blank">Linked In</a></button><br>
+
+                </div>
+                <div class="gridbox">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLGZsYc8h4Zds-CgwVk_T5ykObxIbZKfvHtQ&usqp=CAU&reload=on"
+                        alt="" class="gridboximage">
+                    <h2>Shubham Jha</h2>
+                    <button class="btn3"><a href="https://www.instagram.com/shubham4f/" class="a"
+                            target="_blank">Instagram</a></button>
+                    <button class="btn3">-Linked In-</button><br>
+
+                </div>
+            </div>
+            <div class="flex-grid">
+                <div class=""><br><br></a></div>
+                <div class="boxside"><a href="http://www.csi-india.org/" class="last" target="_blank"><br><br>Go to
+                        CSI's official page.</a></div>
+                <div class="boxside"><a href="https://hithaldia.ac.in/" class="last" target="_blank"><br><br>Go to
+                        Haldia Institute of Technology's official page.</a></div>
+                <div class="boxside"><a href="https://forms.gle/24JdkLzCHcU8DaTM7" class="last"
+                        target="_blank"><br><br>Click here for membership form.</a></div>
+                <div class="boxside"><a href="https://forms.gle/FK1bmRbKc5s433Gy8" class="last"
+                        target="_blank"><br><br>Click here to apply for volenteer.</a></div>
+                <div class="boxside"><a href="https://www.instagram.com/csi_hit/" class="last"
+                        target="_blank"><br><br>Click here for CSI HIT Branch's Insta Handle.</a></div>
+                <div class="boxside"><a
+                        href="https://www.google.com/search?gs_ssp=eJzj4tLP1TcwMq_IKzRUYDRgdGDwkkzOzy0oLUktUijOT85MLalUyE9TyMxLyUwEAA_JDZ8&q=computer+society+of+india&oq=comp&aqs=chrome.1.35i39i355j46i39i199i465j69i59j69i57j69i59j46i67j69i60j69i61.2179j0j7&sourceid=chrome&ie=UTF-8"
+                        class="last" target="_blank"><br><br>Click here for other references.</a></div>
+                <div class=""><br><br></a></div>
+            </div>
+        </div>
+    </div>
+    <div class="form">
+        <h2>Any Suggestions</h2>
+        <input type="text" placeholder="Type here" class="SearchBar"><br><br>
+        <input type="text" placeholder="Enter your name." class="SearchBar"><br><br>
+        <input type="text" placeholder="Enter your age." class="SearchBar"><br><br>
+        <input type="text" placeholder="Enter your course." class="SearchBar"><br><br>
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female<br><br>
+        <button class="btn">Submit</button>
+
+    </div>
+    <div class="box"><br></div>
+    <div id="bod" class="box">
+        <hr>
+        <h2>&#169; CSI HIT Students' Branch <br>
+            Haldia Institute of Technology<br>
+            Haldia, West Brngal<br>
+            <!-- Computer Science and Engineering<br> -->
+            <a href="https://www.instagram.com/csi_hit/" class="last" target="_blank">Instagram</a>
+        </h2>
+    </div>
+</body>
+
+</html>
